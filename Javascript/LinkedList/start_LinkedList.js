@@ -11,6 +11,13 @@
 // }
 
 // 17 --> 23 --> 29
+
+class Node{
+    constructor(value){
+        this.value = value;
+        this.next =null;
+    }
+}
 class LinkedList{
     constructor(value){
         this.head={
@@ -22,10 +29,13 @@ class LinkedList{
     }
     append(value){
         //
-        const newNode={
-            value:value,
-            next:null
-        };
+        // const newNode={
+        //     value:value,
+        //     next:null
+        // };
+        // implementing with class
+        const newNode = new Node(value);
+
         this.tail.next=newNode;
         this.tail=newNode;
         this.length++;
@@ -40,6 +50,22 @@ class LinkedList{
         this.length++;
         return this;
     }
+    printList(){
+        const array = [];
+        let currentNode = this.head;
+        while(currentNode != null){
+            array.push(currentNode.value);
+            currentNode = currentNode.next;
+        }
+        return array;
+    }
+    insert(index, value){ // inser a new node at a given index
+        if(index ==0 ){
+            this.prepend(value);
+            return this.printList();
+        }
+    }
+
 }
 
 
@@ -48,4 +74,6 @@ myLinkedList.append(23);
 myLinkedList.append(29);
 myLinkedList.append(31);
 myLinkedList.prepend(13);
-console.log(myLinkedList);
+myLinkedList.insert(39);
+myLinkedList.printList();
+// console.log(myLinkedList);
