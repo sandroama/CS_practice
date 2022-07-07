@@ -64,6 +64,14 @@ class LinkedList{
             this.prepend(value);
             return this.printList();
         }
+        if(index >= this.length){
+            return this.append(value);
+        }
+        const newNode = new Node(value);
+        
+    }
+    traverseToIndex(index){
+        // check param
     }
 
 }
