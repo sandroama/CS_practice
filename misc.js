@@ -8,3 +8,4 @@ const names =["Sandro","Ana"];
 names.push("Herold");
 console.log(names);
 
+// let const var
