@@ -38,10 +38,14 @@ class Node {
       if(!this.top){
         return null;
       }
+      if(this.length===0){
+        this.bottom = null;
+
+      }
       const pointer = this.top;
       this.top = this.top.next;
       this.length--;
-      return this;
+      return pointer;
     }
     //isEmpty
   }
@@ -50,7 +54,7 @@ class Node {
   myStack.push('Google');
   myStack.push('Udemy');
   myStack.push('DC');
-
+  myStack.pop();
   console.log(myStack);
   
   
