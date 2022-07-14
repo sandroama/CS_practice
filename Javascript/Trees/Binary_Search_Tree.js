@@ -44,7 +44,65 @@ class Node {
       }
     }
     lookup(value){
-      //Code here
+      if(!this.root){
+        return false;
+      }
+      let currentNode=this.root;
+      while(currentNode){
+
+        if(currentNode.value===value){
+            return currentNode;
+        }
+        else if(value < currentNode.value){
+            currentNode=currentNode.left;
+        }
+        else{
+            currentNode=currentNode.right;
+        }
+      }
+    }
+    remove(value){
+        if(!this.root){
+            return false;
+        }
+        let currentNode = this.root;
+        let parentNode = null;
+        while(currentNode){
+            if(value < currentNode.value){
+                parentNode = currentNode;
+                currentNode=parentNode.left;
+            }
+            else if(value > currentNode.value){
+                parentNode=currentNode;
+                currentNode=currentNode.right;
+            }
+            else if(currentNode.value === value){
+                // case 1: No right child
+                if(currentNode.right===null){
+                    if(parentNode===null){
+                        this.root = currentNode.left;
+                    }else{
+                        // parent > current val
+                        if(currentNode.value < parentNode.value){
+                            parentNode.left = currentNode.left;
+                        }
+                        // if parent < curr val, make left child a right child of parent
+                        else if(currentNode.value>parentNode.value){ 
+                            parentNode.right=currentNode.left;
+                        }
+                    }
+                }
+                // case 2: Right child which doesnt have a left child
+                else if(currentNode.right.left = null){
+                    if(parentNode === null){
+                        this.root = currentNode.left;
+                    }
+                    else{
+                        currentNode.right.left = currentNode.left;
+                    }
+                }
+            }
+        }
     }
     // remove
   }
