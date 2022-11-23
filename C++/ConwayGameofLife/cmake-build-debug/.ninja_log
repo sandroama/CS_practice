@@ -1,0 +1,11 @@
+# ninja log v5
+2	491	1667336107331007192	CMakeFiles/ConwayGameofLife.dir/nextgen.cpp.o	f6fa744adeda9ccf
+1	499	1667336107339995672	CMakeFiles/ConwayGameofLife.dir/gol_skeleton_text.cpp.o	f848972017b63f19
+3	24	1667336115951015472	CMakeFiles/ConwayGameofLife.dir/gol_skeleton_sfml.cpp.o	d7f2f132b648fca0
+3	25	1667336136458066621	CMakeFiles/ConwayGameofLife.dir/prevCode.cpp.o	3d917ceaa86117b2
+25	74	1667336136507643738	ConwayGameofLife	8f8f5162da08477
+2	322	1667336386153156622	CMakeFiles/ConwayGameofLife.dir/gol_skeleton_text.cpp.o	f848972017b63f19
+323	362	1667336386194199835	ConwayGameofLife	8f8f5162da08477
+3	483	1667338432893810870	CMakeFiles/ConwayGameofLife.dir/nextgen.cpp.o	f6fa744adeda9ccf
+2	491	1667338432902663371	CMakeFiles/ConwayGameofLife.dir/gol_skeleton_text.cpp.o	f848972017b63f19
+491	542	1667338432955718588	ConwayGameofLife	8f8f5162da08477
